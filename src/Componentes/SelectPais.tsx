@@ -27,19 +27,22 @@ const SelectPais = ({ fn }: props) => {
         fn(parseInt(e.target.value));
     }
     return (
-        <select
-            value={paisID}
-            onChange={handleChange}
-            className='my-7 w-full p-2 bg-white border border-gray-300 rounded roundend-lg text-center text-lg font-bold text-gray-400'
-        >
-            <option value={0}>Seleccione un Pais</option>
-            {apiData.length > 0 &&
-                apiData.map((pais) => (
-                    <option key={pais.country_id} value={pais.country_id}>
-                        {pais.country_name}
-                    </option>
-                ))}
-        </select>
+        <>
+            <label className='block text-sm uppercase text-gray-500 -mb-5 font-bold'>País</label>
+            <select
+                value={paisID}
+                onChange={handleChange}
+                className='my-6 w-full p-2 bg-white border border-gray-500 rounded roundend-lg text-center text-lg font-bold text-gray-400'
+            >
+                <option value={0}>Seleccione un Pais</option>
+                {apiData.length > 0 &&
+                    apiData.map((pais) => (
+                        <option key={pais.country_id} value={pais.country_id}>
+                            {pais.country_name}
+                        </option>
+                    ))}
+            </select>
+        </>
     );
 };
 

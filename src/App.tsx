@@ -1,8 +1,10 @@
 import React from 'react';
-import { JugadoresProvider } from './Componentes/Context/Provider';
+import { JugadoresProvider } from './Context/Provider';
+import { Equipos } from './Componentes/Equipos';
 import Formulario from './Componentes/Formulario';
-import ListaJugadores from './Componentes/ListaJugadores';
+
 import Toast from './Componentes/Toast';
+import ToastError from './Componentes/ToastError';
 
 function App() {
     return (
@@ -11,11 +13,12 @@ function App() {
                 <div className='grid md:grid-cols-3 md:gap-2 grid-cols-1'>
                     <Formulario />
 
-                    <ListaJugadores />
+                    <Equipos />
 
-                    <div className='my-20 mx-10 max-w-2xl mx-full bg-white shadow p-10'>3</div>
+                    {/* <div className='my-20 mx-10 max-w-2xl mx-full bg-white shadow p-10'>3</div> */}
 
                     <Toast />
+                    <ToastError />
                 </div>
             </JugadoresProvider>
         </>

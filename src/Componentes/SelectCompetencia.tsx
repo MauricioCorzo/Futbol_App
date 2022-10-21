@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { ChangeEvent, Dispatch, SetStateAction, useEffect, useState } from 'react';
-import { Competencia, Competencias } from '../interfaces';
+import { Competencias } from '../interfaces';
 
 interface props {
     country_id: number;
@@ -28,19 +28,22 @@ const SelectCompetencia = ({ country_id, fn }: props) => {
     };
 
     return (
-        <select
-            value={competenciaId}
-            onChange={handleChange}
-            className='my-7 w-full p-2 bg-white border border-gray-300 rounded roundend-lg text-center text-lg font-bold text-gray-400'
-        >
-            <option value={0}>Seleccione una Competencia</option>
-            {apiData.length > 0 &&
-                apiData.map((competencia) => (
-                    <option key={competencia.league_id} value={competencia.league_id}>
-                        {competencia.league_name}
-                    </option>
-                ))}
-        </select>
+        <>
+            <label className='block text-sm uppercase text-gray-500 -mb-5 font-bold'>Liga</label>
+            <select
+                value={competenciaId}
+                onChange={handleChange}
+                className='my-6 w-full p-2 bg-white border border-gray-500 rounded roundend-lg text-center text-lg font-bold text-gray-400'
+            >
+                <option value={0}>Seleccione una Liga</option>
+                {apiData.length > 0 &&
+                    apiData.map((competencia) => (
+                        <option key={competencia.league_id} value={competencia.league_id}>
+                            {competencia.league_name}
+                        </option>
+                    ))}
+            </select>
+        </>
     );
 };
 

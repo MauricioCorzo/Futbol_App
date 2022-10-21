@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Equipos, Jugadores } from '../interfaces';
+import { Equipos } from '../interfaces';
 import SelectCompetencia from './SelectCompetencia';
 import SelectJugador from './SelectJugador';
 import SelectPais from './SelectPais';
