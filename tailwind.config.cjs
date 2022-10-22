@@ -5,8 +5,8 @@ module.exports = {
     theme: {
         extend: {
             backgroundImage: {
-                home: 'url(src/images/FondoHome.jpg)',
-                confeti: 'url(src/images/confeti.png)',
+                home: 'url("../src/images/FondoHome.jpg")',
+                confeti: 'url("../src/images/confeti.png")',
             },
         },
     },
