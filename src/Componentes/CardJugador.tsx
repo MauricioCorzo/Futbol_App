@@ -10,6 +10,7 @@ interface props {
 const CardJugador = ({ jugador, setIdJugador }: props) => {
     const [imagen, setImagen] = useState<boolean | undefined>(false);
 
+    //ALGUNAS URL NO TRAEN FOTO, ACA COMPRUEBO EL ERROR
     useEffect(() => {
         comprobarImagen(`${jugador.player_image}`)
             .then((r: string | undefined) => {

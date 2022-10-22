@@ -19,3 +19,16 @@ export const comprobarImagen = async (url: string): Promise<string | undefined> 
         return error.toJSON().message;
     }
 };
+
+export const animaciones = () => {
+    setTimeout(function () {
+        const replacers = document.querySelectorAll('[data-replace]');
+        for (let i = 0; i < replacers.length; i++) {
+            const replaceClasses = JSON.parse(replacers[i].dataset.replace.replace(/'/g, '"'));
+            Object.keys(replaceClasses).forEach(function (key) {
+                replacers[i].classList.remove(key);
+                replacers[i].classList.add(replaceClasses[key]);
+            });
+        }
+    }, 1000);
+};

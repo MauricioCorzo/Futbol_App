@@ -96,7 +96,7 @@ const SelectJugador = ({ team }: props) => {
                         id='btn1'
                         type='button'
                         onClick={handleClick}
-                        className='my-4 px-6 py-3 bg-indigo-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-indigo-700 hover:shadow-lg focus:bg-indigo-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-indigo-800 active:shadow-lg transition duration-150 ease-in-out'
+                        className='my-4 px-6 py-3 bg-indigo-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-indigo-700 hover:shadow-lg focus:bg-indigo-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-indigo-800 active:shadow-lg hover:scale-110 transition duration-500 ease-in-out'
                     >
                         Agregar a Equipo A
                     </button>
@@ -104,7 +104,7 @@ const SelectJugador = ({ team }: props) => {
                         type='button'
                         id='btn2'
                         onClick={handleClick}
-                        className='my-4 px-4 py-3 bg-indigo-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-indigo-700 hover:shadow-lg focus:bg-indigo-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-indigo-800 active:shadow-lg transition duration-150 ease-in-out'
+                        className='my-4 px-4 py-3 bg-indigo-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-indigo-700 hover:shadow-lg focus:bg-indigo-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-indigo-800 active:shadow-lg hover:scale-110 transition duration-500 ease-in-out'
                     >
                         Agregar a Equipo B
                     </button>

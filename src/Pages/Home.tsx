@@ -10,7 +10,7 @@ const Home = () => {
 
     const { jugadores1, jugadores2 } = jugadoresState;
     return (
-        <div className='bg-home bg-cover bg-no-repeat bg-bottom min-h-screen'>
+        <div className='bg-home bg-cover  bg-no-repeat bg-bottom min-h-screen'>
             <div
                 className={`${
                     jugadores1.length == 0 && jugadores2.length == 0
