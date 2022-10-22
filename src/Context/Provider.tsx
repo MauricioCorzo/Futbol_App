@@ -20,8 +20,13 @@ export const JugadoresProvider = ({ children }: props) => {
     const borrarJugador = (id: string) => {
         dispatch({ type: 'borrarJuador', payload: id });
     };
+    const borrarEquipo = (equipo: string) => {
+        dispatch({ type: 'borrarEquipo', payload: equipo });
+    };
 
     return (
-        <JugadoresContext.Provider value={{ jugadoresState, agregarJugador1, agregarJugador2, borrarJugador }}>{children}</JugadoresContext.Provider>
+        <JugadoresContext.Provider value={{ jugadoresState, agregarJugador1, agregarJugador2, borrarJugador, borrarEquipo }}>
+            {children}
+        </JugadoresContext.Provider>
     );
 };

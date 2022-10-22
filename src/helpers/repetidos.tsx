@@ -1,3 +1,4 @@
+import axios, { AxiosResponse } from 'axios';
 import { Jugadores } from '../interfaces';
 
 export const comprobarRepetidos = (obj1: Jugadores, obj2: Jugadores, id: number) => {
@@ -6,4 +7,15 @@ export const comprobarRepetidos = (obj1: Jugadores, obj2: Jugadores, id: number)
 
 export const camisetaRandom = () => {
     return Math.floor(Math.random() * 100).toString();
+};
+
+export const comprobarImagen = async (url: string): Promise<string | undefined> => {
+    try {
+        const response: AxiosResponse = await axios(`${url}`);
+        if (response) {
+            return response.statusText;
+        }
+    } catch (error: any) {
+        return error.toJSON().message;
+    }
 };

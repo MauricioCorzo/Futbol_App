@@ -1,10 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import { BrowserRouter } from 'react-router-dom';
+import { JugadoresProvider } from './Context/Provider';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
-        <App />
+        <JugadoresProvider>
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
+        </JugadoresProvider>
     </React.StrictMode>
 );

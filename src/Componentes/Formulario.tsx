@@ -20,7 +20,7 @@ const Formulario = () => {
     }, [selectCompetencia]);
 
     return (
-        <div className='my-20 mx-10 max-w-2xl mx-full bg-white shadow p-10'>
+        <div className='my-20 mx-10 max-w-2xl mx-full bg-white shadow-lg p-10'>
             <h1 className='text-3xl font-extrabold text-gray-500 text-center mb-10'>
                 ¡Crea tu <span className='text-indigo-600'>equipo </span> ideal!
             </h1>

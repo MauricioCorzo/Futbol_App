@@ -7,6 +7,7 @@ type JugadoresContextProps = {
     agregarJugador1: (obj: Player) => void;
     agregarJugador2: (obj: Player) => void;
     borrarJugador: (id: string) => void;
+    borrarEquipo: (equipo: string) => void;
 };
 
 export const JugadoresContext = createContext<JugadoresContextProps>({} as JugadoresContextProps);

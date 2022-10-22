@@ -1,5 +1,5 @@
-import React, { Dispatch, SetStateAction } from 'react';
-import { camisetaRandom } from '../helpers/repetidos';
+import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
+import { camisetaRandom, comprobarImagen } from '../helpers/repetidos';
 import { Player } from '../interfaces';
 
 interface props {
@@ -8,6 +8,19 @@ interface props {
 }
 
 const CardJugador = ({ jugador, setIdJugador }: props) => {
+    const [imagen, setImagen] = useState<boolean | undefined>(false);
+
+    useEffect(() => {
+        comprobarImagen(`${jugador.player_image}`)
+            .then((r: string | undefined) => {
+                if (r?.endsWith('Error')) setImagen(true);
+                if (r?.endsWith('404')) setImagen(false);
+            })
+            .catch((r: any) => r);
+
+        console.log(imagen);
+    }, [imagen]);
+
     function handleClick() {
         setIdJugador(jugador.player_id);
         document.getElementById('modalBorrarJugador')?.classList.remove('hidden');
@@ -19,7 +32,7 @@ const CardJugador = ({ jugador, setIdJugador }: props) => {
                 <div className='p-2 w-full flex flex-row items-center sm:flex-row sm:items-center sm:justify-between space-y-4 md:space-y-0 gap-5'>
                     <div className='sm:w-1/4 md:w-1/6 lg:w-1/6'>
                         <img
-                            src={jugador.player_image ? jugador.player_image : 'src/images/user404.png'}
+                            src={jugador.player_image && imagen ? jugador.player_image : 'src/images/user404.png'}
                             alt='Avatar'
                             className='rounded-full w-32'
                         />
@@ -34,7 +47,7 @@ const CardJugador = ({ jugador, setIdJugador }: props) => {
                     </div>
                     <button
                         type='button'
-                        className='box-content sm:w-2 sm:pb-16 sm:pl-0 pb-20 px-1 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-red-600 hover:opacity-75 hover:no-underline ease-in-out delay-150 hover:cursor-pointer transition hover:-translate-y0 hover:scale-110 duration-300'
+                        className='box-content sm:w-2 sm:pb-16 sm:pl-0 pb-20 px-1 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-red-600 hover:opacity-75 hover:no-underline ease-in-out delay-150 hover:cursor-pointer transition hover:-translate-y-0 hover:scale-110 duration-300'
                         onClick={handleClick}
                     >
                         X
