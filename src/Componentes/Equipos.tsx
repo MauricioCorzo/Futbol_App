@@ -1,9 +1,10 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { JugadoresContext } from '../Context/Context';
 import ListaJugadores from './ListaJugadores';
 import ModalBorrarJugador from '../Modals/ModalBorrarJugador';
 import { ModalEdicion } from '../Modals/ModalEdicion';
 import ModalEliminarEquipo from '../Modals/ModalEliminarEquipo';
+import ModalFelicitaciones from '../Modals/ModalFelicitaciones';
 
 export const Equipos = () => {
     //Context
@@ -25,7 +26,10 @@ export const Equipos = () => {
     return (
         <>
             {jugadores1.length == 0 && jugadores2.length == 0 && (
-                <div className='my-20 mx-10 max-w-2xl mx-full sm:pt-40 sm:pr-44'>
+                <div
+                    className='my-20 mx-10 max-w-2xl mx-full sm:pt-0 sm:pr-40 duration-1000 relative transform transition-all translate-y-96 ease-out opacity-0'
+                    data-replace='{ "translate-y-96": "translate-y-0", "opacity-0": "opacity-100" }'
+                >
                     <h1 className='text-2xl font-extrabold text-indigo-600 text-center mb-10'>No hay equipos aún.¡Crea uno!</h1>
                 </div>
             )}
@@ -54,6 +58,7 @@ export const Equipos = () => {
             {modal === 'A' ? <ModalEdicion setNombreEquipo={setNombreEquipo1} /> : <ModalEdicion setNombreEquipo={setNombreEquipo2} />}
             <ModalBorrarJugador idJugador={idJugador} />
             <ModalEliminarEquipo equipo={equipoEliminar} />
+            {jugadores1.length > 4 && jugadores2.length > 4 && <ModalFelicitaciones />}
         </>
     );
 };

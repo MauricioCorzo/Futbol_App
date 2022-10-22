@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { animaciones } from '../helpers/repetidos';
+import { animaciones } from '../helpers';
 
 const LandingPage = () => {
     useEffect(() => {
-        animaciones();
+        animaciones(200);
     }, []);
 
     return (
@@ -14,7 +14,7 @@ const LandingPage = () => {
                     <div className='container mx-auto xl:px-32'>
                         <div className='grid lg:grid-cols-2 gap-12 flex items-center lg:-mt-3 mt-5'>
                             <div
-                                className='mt-12 lg:mt-0 duration-1000 relative transform transition-all -translate-y-96 ease-out opacity-0'
+                                className='mt-12 lg:mt-0 duration-[2500ms] relative transform transition-all -translate-y-96 ease-out opacity-0'
                                 data-replace='{ "-translate-y-96": "translate-y-0", "opacity-0": "opacity-100" }'
                             >
                                 <h1 className='text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-6'>
@@ -47,7 +47,7 @@ const LandingPage = () => {
                             <div className='lg:pt-10 lg:mb-0'>
                                 <img
                                     src='src/images/Player.png'
-                                    className='w-full lg:scale-125 scale-100 -ml-7 mt-10 duration-1000 relative transform transition-all translate-y-96 ease-out opacity-0'
+                                    className='w-full lg:scale-125 scale-100 -ml-7 mt-10 duration-[2500ms] relative transform transition-all translate-y-96 ease-out opacity-0'
                                     data-replace='{ "translate-y-96": "translate-y-0", "opacity-0": "opacity-100" }'
                                 />
                             </div>

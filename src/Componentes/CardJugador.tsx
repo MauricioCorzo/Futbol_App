@@ -1,5 +1,5 @@
 import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
-import { camisetaRandom, comprobarImagen } from '../helpers/repetidos';
+import { animaciones, camisetaRandom, comprobarImagen } from '../helpers';
 import { Player } from '../interfaces';
 
 interface props {
@@ -19,8 +19,8 @@ const CardJugador = ({ jugador, setIdJugador }: props) => {
             })
             .catch((r: any) => r);
 
-        console.log(imagen);
-    }, [imagen]);
+        animaciones(0);
+    }, []);
 
     function handleClick() {
         setIdJugador(jugador.player_id);
@@ -30,7 +30,10 @@ const CardJugador = ({ jugador, setIdJugador }: props) => {
     return (
         <>
             <li key={jugador.player_id}>
-                <div className='p-2 w-full flex flex-row items-center sm:flex-row sm:items-center sm:justify-between space-y-4 md:space-y-0 gap-5'>
+                <div
+                    className='p-2 w-full flex flex-row items-center sm:flex-row sm:items-center sm:justify-between space-y-4 md:space-y-0 gap-5 opacity-0 duration-1000 relative transform transition-all'
+                    data-replace='{ "opacity-0": "opacity-100" }'
+                >
                     <div className='sm:w-1/4 md:w-1/6 lg:w-1/6'>
                         <img
                             src={jugador.player_image && imagen ? jugador.player_image : 'src/images/user404.png'}

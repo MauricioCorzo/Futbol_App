@@ -1,7 +1,6 @@
-import React, { Dispatch, SetStateAction, useState } from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 import { Player } from '../interfaces';
 import CardJugador from './CardJugador';
-import ModalEliminarEquipo from '../Modals/ModalEliminarEquipo';
 
 interface props {
     jugadores: Player[];
@@ -26,7 +25,7 @@ const ListaJugadores = ({ jugadores, equipo, nombreEquipo, modal, setModal, setI
 
     return (
         <>
-            <div className='my-20 mx-10 max-w-2xl mx-full bg-white shadow p-10'>
+            <div className='row-start-1 row-end-4 my-20 mx-10 max-w-2xl mx-full bg-white shadow p-10'>
                 <div className='flex justify-end'>
                     <button
                         onClick={eliminarEquipo}
@@ -51,7 +50,7 @@ const ListaJugadores = ({ jugadores, equipo, nombreEquipo, modal, setModal, setI
                     </button>
                 </div>
 
-                <div className='bg-gray-50 shadow roundend-lg'>
+                <div className='bg-gray-50 shadow roundend-lg '>
                     <ul className='divide-white divide-y-4'>
                         {jugadores.map((jugador) => (
                             <CardJugador key={jugador.player_id} jugador={jugador} setIdJugador={setIdJugador} />

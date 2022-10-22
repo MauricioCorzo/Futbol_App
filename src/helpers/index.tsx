@@ -20,7 +20,7 @@ export const comprobarImagen = async (url: string): Promise<string | undefined> 
     }
 };
 
-export const animaciones = () => {
+export const animaciones = (segundos: number) => {
     setTimeout(function () {
         const replacers = document.querySelectorAll('[data-replace]');
         for (let i = 0; i < replacers.length; i++) {
@@ -30,5 +30,27 @@ export const animaciones = () => {
                 replacers[i].classList.add(replaceClasses[key]);
             });
         }
-    }, 1000);
+    }, segundos);
+};
+
+export const habilitacionDeBotones = (jugadores1: Jugadores, jugadores2: Jugadores, btn1: HTMLElement | null, btn2: HTMLElement | null) => {
+    if (jugadores1.length > 4) {
+        btn1?.setAttribute('disabled', 'true');
+        btn1?.classList.replace('bg-indigo-600', 'bg-gray-400');
+        btn1?.classList.replace('hover:bg-indigo-700', 'hover:bg-gray-400');
+    } else {
+        btn1?.classList.replace('bg-gray-400', 'bg-indigo-600');
+        btn1?.classList.replace('hover:bg-gray-400', 'hover:bg-indigo-700');
+        btn1?.removeAttribute('disabled');
+    }
+    if (jugadores2.length > 4) {
+        btn2?.setAttribute('disabled', 'true');
+        btn2?.classList.replace('bg-indigo-600', 'bg-gray-400');
+        btn2?.classList.replace('hover:bg-indigo-700', 'hover:bg-gray-400');
+        return;
+    } else {
+        btn2?.classList.replace('bg-gray-400', 'bg-indigo-600');
+        btn2?.classList.replace('hover:bg-gray-400', 'hover:bg-indigo-700');
+        btn2?.removeAttribute('disabled');
+    }
 };

@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useContext, useEffect, useState } from 'react';
 import { Equipos, Jugadores, Player } from '../interfaces';
 import { JugadoresContext } from '../Context/Context';
-import { comprobarRepetidos } from '../helpers/repetidos';
+import { comprobarRepetidos, habilitacionDeBotones } from '../helpers';
 
 interface props {
     team: Equipos;
@@ -24,8 +24,10 @@ const SelectJugador = ({ team }: props) => {
     const [jugador, setJugador] = useState<Player>({} as Player);
 
     useEffect(() => {
+        habilitacionDeBotones(jugadores1, jugadores2, btn1, btn2);
+
         setJugadores(team[0].players);
-    }, [team]);
+    }, [team, jugadores1, jugadores2]);
 
     const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
         setIdJugador(parseInt(e.target.value));
@@ -43,10 +45,6 @@ const SelectJugador = ({ team }: props) => {
                 }, 2500);
                 return;
             }
-            if (jugadores1.length > 4) {
-                btn1?.setAttribute('disabled', 'true');
-                return;
-            }
             document.getElementById('myToast')?.classList.remove('hidden');
             agregarJugador1(jugador);
         }
@@ -57,10 +55,6 @@ const SelectJugador = ({ team }: props) => {
                 setTimeout(() => {
                     document.getElementById('myToastError')?.classList.add('hidden');
                 }, 2500);
-                return;
-            }
-            if (jugadores2.length > 4) {
-                btn2?.setAttribute('disabled', 'true');
                 return;
             }
             document.getElementById('myToast')?.classList.remove('hidden');

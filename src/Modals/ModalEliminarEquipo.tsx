@@ -14,7 +14,7 @@ const ModalEliminarEquipo = ({ equipo }: props) => {
     }
 
     return (
-        <div id='modalBorrarEquipo' className='hidden fixed bg-red-600 bg-opacity-50 flex justify-center items-center top-0 right-0 bottom-0 left-0'>
+        <div id='modalBorrarEquipo' className='hidden fixed bg-red-800 bg-opacity-50 flex justify-center items-center top-0 right-0 bottom-0 left-0'>
             <div id='modalBorrarEquipo' className=' bg-white px-16 py-14 rounded-md text-center'>
                 <h1 className='text-xl mb-4 font-bold text-slate-500 pb-3'>¿Seguro quieres borrar este equipo?</h1>
                 <button
