@@ -12,7 +12,7 @@ const LandingPage = () => {
             <section className='mb-0'>
                 <div className='px-6 py-12 md:px-12 bg-gray-50 text-gray-800 text-center lg:text-left'>
                     <div className='container mx-auto xl:px-32'>
-                        <div className='grid lg:grid-cols-2 gap-12 flex items-center lg:-mt-3 mt-5'>
+                        <div className='grid lg:grid-cols-2 lg:gap-12 flex items-center lg:-mt-3 mt-5'>
                             <div
                                 className='mt-12 lg:mt-0 duration-[2500ms] relative transform transition-all -translate-y-96 ease-out opacity-0'
                                 data-replace='{ "-translate-y-96": "translate-y-0", "opacity-0": "opacity-100" }'
@@ -33,7 +33,7 @@ const LandingPage = () => {
                                     </button>
                                 </Link>
                                 <a
-                                    className='inline-block px-7 py-3 bg-transparent text-blue-600 font-medium text-sm leading-snug uppercase rounded hover:text-blue-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out'
+                                    className='lg:inline-block lg:px-7 lg:py-3 px-2 bg-transparent text-blue-600 font-medium text-sm leading-snug uppercase rounded hover:text-blue-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out'
                                     data-mdb-ripple='true'
                                     data-mdb-ripple-color='light'
                                     href='https://github.com/MauricioCorzo'
@@ -41,7 +41,7 @@ const LandingPage = () => {
                                 >
                                     Mi Github
                                 </a>
-                                <img src='src/images/github.png' className='inline-block mb-1 py-3 -ml-7 scale-50' />
+                                <img src='src/images/github.png' className='inline-block mb-1 py-3 lg:-ml-7 ml-0 scale-50' />
                             </div>
 
                             <div className='lg:pt-10 lg:mb-0'>

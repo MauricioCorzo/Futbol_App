@@ -23,7 +23,7 @@ const Formulario = () => {
 
     return (
         <div
-            className='lg:row-end-3 lg:row-span-2 my-20 mx-10 max-w-2xl mx-full bg-white shadow-lg p-10 duration-1000 relative transform transition-all -translate-x-96 ease-out opacity-0'
+            className='lg:row-end-3 lg:row-span-2 lg:my-20 my-4 mx-10 max-w-2xl mx-full bg-white shadow-lg p-10 duration-1000 relative transform transition-all -translate-x-96 ease-out opacity-0'
             data-replace='{ "-translate-x-96": "translate-y-0", "opacity-0": "opacity-100" }'
         >
             <h1 className='text-3xl font-extrabold text-gray-500 text-center mb-10'>

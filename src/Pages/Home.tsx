@@ -14,8 +14,8 @@ const Home = () => {
             <div
                 className={`${
                     jugadores1.length == 0 && jugadores2.length == 0
-                        ? 'grid md:grid-cols-2 md:gap-2 grid-cols-1'
-                        : 'grid md:grid-cols-3 md:gap-2 grid-cols-1'
+                        ? 'grid lg:grid-cols-2 lg:gap-2 grid-cols-1'
+                        : 'grid lg:grid-cols-3 lg:gap-2 grid-cols-1'
                 }`}
             >
                 <Formulario />
