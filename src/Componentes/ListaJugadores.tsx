@@ -25,7 +25,7 @@ const ListaJugadores = ({ jugadores, equipo, nombreEquipo, modal, setModal, setI
 
     return (
         <>
-            <div className='row-start-1 row-end-4 my-20 mx-10 max-w-2xl mx-full bg-white shadow p-10'>
+            <div className='lg:row-start-1 lg:row-end-4 my-20 mx-10 max-w-2xl mx-full bg-white shadow p-10'>
                 <div className='flex justify-end'>
                     <button
                         onClick={eliminarEquipo}
