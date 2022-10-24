@@ -26,7 +26,7 @@ O utilízala directamente desde el siguiente link para usarlo en linea:
 
 ##
 
-[![Proyecto](https://img.shields.io/badge/DREAM_TEAM_APP-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://thunderous-caramel-53e757.netlify.app/)
+[![Proyecto](https://img.shields.io/badge/DREAM_TEAM_APP-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://bespoke-sable-1a61a9.netlify.app/)
 
 ### Tecnologias Utilizadas
 
