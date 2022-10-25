@@ -41,12 +41,13 @@ const LandingPage = () => {
                                 >
                                     Mi Github
                                 </a>
-                                <img src='src/images/github.png' className='inline-block mb-1 py-3 lg:-ml-7 ml-0 scale-50' />
+                                <img src='../src/images/github.png' alt='Logo de Github' className='inline-block mb-1 py-3 lg:-ml-7 ml-0 scale-50' />
                             </div>
 
                             <div className='lg:pt-10 lg:mb-0'>
                                 <img
-                                    src='src/images/Player.png'
+                                    src='../src/images/Player.png'
+                                    alt='Imagen de Jugador'
                                     className='w-full lg:scale-125 scale-100 -ml-7 mt-10 duration-[2500ms] relative transform transition-all translate-y-96 ease-out opacity-0'
                                     data-replace='{ "translate-y-96": "translate-y-0", "opacity-0": "opacity-100" }'
                                 />

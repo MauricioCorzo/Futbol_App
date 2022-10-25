@@ -13,8 +13,8 @@ export const ModalEdicion = ({ setNombreEquipo }: props) => {
     };
 
     return (
-        <div id='modalEdicion' className='container flex justify-center mx-auto hidden'>
-            <div className='absolute inset-0 flex items-center justify-center bg-gray-700 bg-opacity-50'>
+        <div id='modalEdicion' className='flex justify-center mx-auto hidden'>
+            <div className='fixed inset-0 flex items-center justify-center bg-gray-700 bg-opacity-50'>
                 <div className='max-w-2xl p-6 bg-white'>
                     <div className='flex items-center justify-between'>
                         <h3 className='text-2xl'>Editar Nombre</h3>

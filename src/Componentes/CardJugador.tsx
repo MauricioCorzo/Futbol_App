@@ -36,7 +36,7 @@ const CardJugador = ({ jugador, setIdJugador }: props) => {
                 >
                     <div className='sm:w-1/4 md:w-1/6 lg:w-2/6 '>
                         <img
-                            src={jugador.player_image && imagen ? jugador.player_image : 'src/images/user404.png'}
+                            src={jugador.player_image && imagen ? jugador.player_image : '../src/images/user404.png'}
                             alt='Avatar'
                             className='rounded-full w-32 lg:ml-0 ml-10'
                         />
@@ -44,7 +44,7 @@ const CardJugador = ({ jugador, setIdJugador }: props) => {
                     <div className='sm:w-2/4 md:w-3/6 lg:w-4/6 space-y-2 '>
                         <p className='block text-1xl font-extrabold text-indigo-600 truncate'>Jugador: {jugador.player_name}</p>
                         <div className='w-6 h-6 flex flex-row'>
-                            <img src='src/images/camiseta.png' className='rounded-full w-32' />
+                            <img src='../src/images/camiseta.png' className='rounded-full w-32' />
                             <p className='font-semibold mx-1 '>{jugador.player_number ? jugador.player_number : camisetaRandom()}</p>
                         </div>
                         <p className='text-1xl text-indigo-500'>Club: {jugador.player_team}</p>
